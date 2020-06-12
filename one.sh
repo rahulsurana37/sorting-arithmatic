@@ -27,3 +27,12 @@ arithmetic[four]=$result4
 
 array=(${arithmetic[@]})
 echo "${array[@]}"
+
+IFS=$'\n' read -d '' -r -a a_out < <(printf '%s\n' "${arr[@]}" | sort)
+#printf '%s\n' "${a_out[@]}"
+#echo $sorted
+
+for (( k=${#arr[@]}-1; k>=0; k-- )); do
+	#statements
+	echo "${a_out[$k]} "
+done
