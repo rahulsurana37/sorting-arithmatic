@@ -23,4 +23,7 @@ result4=$((($a%$b)+$c))
 arithmetic[four]=$result4
 #echo $result4
 
-echo ${arithmetic[@]}
+#echo ${arithmetic[@]}
+
+array=(${arithmetic[@]})
+echo "${array[@]}"
